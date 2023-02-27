@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./popup.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  </head>
+  <body>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="title-div d-flex align-items-center">
+          <span class="fs-6 fw-bold my-2" id="ticket-title">Loading...</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+
+          <form action="/action_page.php">
+            <div class="form-group mb-2">
+              <label for="company-name">Company:</label>
+              <input type="text" id="company-name" name="company-name" class="form-control">
+            </div>
+
+            <div class="form-group mb-2">
+              <label for="status">Status:</label>
+              <select class="form-control" id="status">
+
+              </select>
+            </div>
+
+            <div class="form-group mb-2">
+              <label for="issue-type">Issue Type:</label>
+              <select class="form-control" id="issue-type">
+              </select>
+            </div>
+
+            <div class="form-group mb-2">
+              <label for="sub-issue-type">Sub-issue Type:</label>
+              <select class="form-control" id="sub-issue-type">
+              </select>
+            </div>
+
+            <div class="form-group mb-2">
+              <label for="queue">Queue:</label>
+              <select class="form-control" id="queue">
+              </select>
+            </div>
+
+            <div class="form-group mb-2">
+              <label for="primary-resource">Primary Resource:</label>
+              <select class="form-control" id="primary-resource">
+              </select>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="form-group mb-2">
+              <label for="so-number">Picking Slip No:</label>
+              <input type="text" id="so-number" name="so-number" class="form-control">
+            </div>
+
+            <div class="form-group mb-2">
+              <label for="config-quantity">Config Quantity:</label>
+              <input type="text" id="config-quantity" name="config-quantity" class="form-control">
+            </div>
+
+            <button type="submit" class="btn btn-primary my-3">Submit</button>
+            <div>
+              <span id="success-fail-message"></span>
+            </div>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./popup.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Autotask API Ticket Assign",
+  "description": "Uses the Autotask API for ticket assignment",
+  "version": "1.0",
+  "permissions": ["activeTab"],
+  "host_permissions": ["https://*.autotask.net/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.autotask.net/Mvc/ServiceDesk/*"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "logo.png"
+  }
+}
